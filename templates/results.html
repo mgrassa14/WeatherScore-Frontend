@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Location Selector</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body class="bg-light">
+
+    <div class="container min-vh-100 d-flex justify-content-center align-items-center">
+      <div class="card shadow p-4" style="width: 600px;">
+
+        <h3 class="text-center mb-3">Results</h3>
+
+        <!-- NAV TABS -->
+        <nav class="nav justify-content-center">
+          <div class="nav nav-tabs" id="location-tab" role="tablist">
+            <button class="nav-link active" id="1day-tab" data-bs-toggle="tab" data-bs-target="#1day" type="button" role="tab">
+              1 Day
+            </button>
+            <button class="nav-link" id="3day-tab" data-bs-toggle="tab" data-bs-target="#3day" type="button" role="tab">
+              3 Day
+            </button>
+            <button class="nav-link" id="5day-tab" data-bs-toggle="tab" data-bs-target="#5day" type="button" role="tab">
+              5 Day
+            </button>
+            <button class="nav-link" id="7day-tab" data-bs-toggle="tab" data-bs-target="#7day" type="button" role="tab">
+              7 Day
+            </button>
+            <button class="nav-link" id="10day-tab" data-bs-toggle="tab" data-bs-target="#10day" type="button" role="tab">
+              10 Day
+            </button>
+          </div>
+        </nav>
+
+        <!-- TAB CONTENT -->
+        <div class="tab-content mt-3" id="location-tabContent">
+
+          <!-- 1 Day TAB -->
+          <div class="tab-pane fade show active" id="1day" role="tabpanel" aria-labelledby="1day-tab">
+            <p>1 day</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Weather Service</th>
+                  <th scope="col">Accuraccy</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">🥇1st</th>
+                  <td>WunderGround</td>
+                  <td>70%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥈2nd</th>
+                  <td>Accuweather</td>
+                  <td>59%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥉3rd</th>
+                  <td>OpenMeteo</td>
+                  <td>32%</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <button class="btn btn-primary w-100" id="getLocationBtn">Use My Location</button> -->
+          </div>
+
+          <!-- 3 Day TAB -->
+          <div class="tab-pane fade" id="3day" role="tabpanel" aria-labelledby="3day-tab">
+            <p>3 day</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Weather Service</th>
+                  <th scope="col">Accuraccy</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">🥇1st</th>
+                  <td>WunderGround</td>
+                  <td>70%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥈2nd</th>
+                  <td>Accuweather</td>
+                  <td>59%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥉3rd</th>
+                  <td>OpenMeteo</td>
+                  <td>32%</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <button class="btn btn-primary w-100" id="getLocationBtn">Use My Location</button> -->
+          </div>
+
+          <!-- 5 Day TAB -->
+          <div class="tab-pane fade" id="5day" role="tabpanel" aria-labelledby="5day-tab">
+            <p>5 day</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Weather Service</th>
+                  <th scope="col">Accuraccy</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">🥇1st</th>
+                  <td>WunderGround</td>
+                  <td>70%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥈2nd</th>
+                  <td>Accuweather</td>
+                  <td>59%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥉3rd</th>
+                  <td>OpenMeteo</td>
+                  <td>32%</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <button class="btn btn-primary w-100" id="getLocationBtn">Use My Location</button> -->
+          </div>
+
+          <!-- 7 Day TAB -->
+          <div class="tab-pane fade" id="7day" role="tabpanel" aria-labelledby="7day-tab">
+            <p>7 day</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Weather Service</th>
+                  <th scope="col">Accuraccy</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">🥇1st</th>
+                  <td>WunderGround</td>
+                  <td>70%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥈2nd</th>
+                  <td>Accuweather</td>
+                  <td>59%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥉3rd</th>
+                  <td>OpenMeteo</td>
+                  <td>32%</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <button class="btn btn-primary w-100" id="getLocationBtn">Use My Location</button> -->
+          </div>
+
+          <!-- 10 Day TAB -->
+          <div class="tab-pane fade" id="10day" role="tabpanel" aria-labelledby="10day-tab">
+            <p>10 day</p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Ranking</th>
+                  <th scope="col">Weather Service</th>
+                  <th scope="col">Accuraccy</th>
+                </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                <tr>
+                  <th scope="row">🥇1st</th>
+                  <td>WunderGround</td>
+                  <td>70%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥈2nd</th>
+                  <td>Accuweather</td>
+                  <td>59%</td>
+                </tr>
+                <tr>
+                  <th scope="row">🥉3rd</th>
+                  <td>OpenMeteo</td>
+                  <td>32%</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <button class="btn btn-primary w-100" id="getLocationBtn">Use My Location</button> -->
+          </div>
+
+          <!-- MANUAL ZIP TAB -->
+          <!-- <div class="tab-pane fade" id="manual" role="tabpanel" aria-labelledby="manual-tab">
+
+            <form class="row g-3">
+
+            <div class="col-12">
+                <label for="validationServer03" class="form-label">City</label>
+                <input type="text" class="form-control is-invalid" id="validationServer03" required>
+                <div class="invalid-feedback">Please provide a valid city.</div>
+            </div>
+
+            <div class="col-12">
+                <label for="validationServer04" class="form-label">State</label>
+                <select class="form-select is-invalid" id="validationServer04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>...</option>
+                </select>
+                <div class="invalid-feedback">Please select a valid state.</div>
+            </div>
+
+            <div class="col-12">
+                <label for="validationServer05" class="form-label">Zip</label>
+                <input type="text" class="form-control is-invalid" id="validationServer05" required>
+                <div class="invalid-feedback">Please provide a valid zip.</div>
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                <input class="form-check-input is-invalid" type="checkbox" id="invalidCheck3" required>
+                <label class="form-check-label" for="invalidCheck3">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">You must agree before submitting.</div>
+                </div>
+            </div>
+
+            <div class="col-12 text-center">
+                <button class="btn btn-primary w-100" type="submit">Submit form</button>
+            </div>
+
+            </form>
+
+          </div> -->
+
+        </div>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
