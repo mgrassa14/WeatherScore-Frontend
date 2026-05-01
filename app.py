@@ -1,4 +1,7 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
+import requests
+
+CLOUD_FUNCTION_URL = "https://insert-weather-data-700897000697.us-central1.run.app"
 
 app = Flask(__name__)
 
@@ -11,6 +14,18 @@ def home():
 def result():
     # render_template looks in the /templates folder by default
     return render_template('results.html')
+
+@app.route("/submit-location", methods=["POST"])
+def submit_location():
+    payload = request.get_json()
+
+    r = requests.post(CLOUD_FUNCTION_URL, json=payload)
+
+    if r.status_code != 200:
+        return jsonify({"error": "Cloud Function failed"}), 500
+
+    result = r.json()
+    return jsonify({"location_id": result["location_id"]})
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080)
