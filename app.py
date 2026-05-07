@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
-import requests
+# import requests
 from flask_cors import CORS
 import os
+from db import engine
+
 
 CLOUD_FUNCTION_URL = "https://calculate-accuracy-700897000697.us-central1.run.app"
 
