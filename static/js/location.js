@@ -10,7 +10,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
 
     console.log("Submitting payload:", payload);
 
-    const response = await fetch("https://frontend-700897000697.us-central1.run.app", {
+    const response = await fetch("https://calculate-accuracy-700897000697.us-central1.run.app", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
