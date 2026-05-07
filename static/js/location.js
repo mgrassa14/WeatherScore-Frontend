@@ -9,7 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
             city: document.getElementById("validationServer03").value,
             state: document.getElementById("validationServer04").value,
             zip_code: document.getElementById("validationServer05").value,
-            date: new Date().toISOString().split("T")[0]
+            // date: new Date().toISOString().split("T")[0]
+            date: new Date(Date.now() - 86400000).toISOString().split("T")[0]
         };
 
         console.log("Submitting payload:", payload);
