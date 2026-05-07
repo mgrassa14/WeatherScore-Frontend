@@ -2,7 +2,6 @@ Flask==3.1.3
 Flask-Cors
 requests
 gunicorn
-
 SQLAlchemy==2.0.29
 pg8000==1.31.2
 cloud-sql-python-connector[pg8000]
