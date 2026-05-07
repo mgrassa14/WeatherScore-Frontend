@@ -1,9 +1,11 @@
 from flask import Flask, render_template, request, jsonify
 import requests
+from flask_cors import CORS
 
 CLOUD_FUNCTION_URL = "https://calculate-accuracy-700897000697.us-central1.run.app"
 
 app = Flask(__name__)
+CORS(app)  
 
 @app.route('/')
 def home():
@@ -18,6 +20,9 @@ def result():
 @app.route("/submit-location", methods=["POST"])
 def submit_location():
     payload = request.get_json()
+
+    print("POST /submit-location hit")
+    print("Payload:", request.get_json())
 
     r = requests.post(CLOUD_FUNCTION_URL, json=payload)
 

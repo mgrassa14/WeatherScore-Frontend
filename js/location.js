@@ -13,7 +13,9 @@ document.querySelector("form").addEventListener("submit", async (e) => {
         date: date
     };
 
-    const response = await fetch("/submit-location", {
+    console.log("Submitting payload:", payload);
+
+    const response = await fetch("https://frontend-700897000697.us-central1.run.app/submit-location", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
