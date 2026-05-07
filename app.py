@@ -17,21 +17,21 @@ def result():
     # render_template looks in the /templates folder by default
     return render_template('results.html')
 
-@app.route("/submit-location", methods=["POST"])
-def submit_location():
-    payload = request.get_json()
+# @app.route("/submit-location", methods=["POST"])
+# def submit_location():
+#     payload = request.get_json()
 
-    print("POST /submit-location hit")
-    print("Payload:", request.get_json())
+#     print("POST /submit-location hit")
+#     print("Payload:", request.get_json())
 
-    r = requests.post(CLOUD_FUNCTION_URL, json=payload)
+#     r = requests.post(CLOUD_FUNCTION_URL, json=payload)
 
-    if r.status_code != 200:
-        return jsonify({"error": "Cloud Function failed"}), 500
+#     if r.status_code != 200:
+#         return jsonify({"error": "Cloud Function failed"}), 500
 
-    result = r.json()
-    return jsonify({"location_id": result["location_id"]})
+#     result = r.json()
+#     return jsonify({"location_id": result["location_id"]})
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8080)
+# if __name__ == '__main__':
+#     app.run(host="0.0.0.0", port=8080)
 
