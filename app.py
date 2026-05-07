@@ -18,23 +18,31 @@ def result():
     # render_template looks in the /templates folder by default
     return render_template('results.html')
 
-# @app.route("/submit-location", methods=["POST"])
-# def submit_location():
-#     payload = request.get_json()
+@app.route("/api/results")
+def api_results():
+    location_id = request.args.get("location_id")
 
-#     print("POST /submit-location hit")
-#     print("Payload:", request.get_json())
+    if not location_id:
+        return {"error": "Missing location_id"}, 400
 
-#     r = requests.post(CLOUD_FUNCTION_URL, json=payload)
+    with engine.connect() as conn:
+        rows = conn.execute("""
+            SELECT provider, accuracy, ranking
+            FROM accuracy_results
+            WHERE location_id = %s AND horizon = 1
+            ORDER BY ranking ASC
+        """, (location_id,)).fetchall()
 
-#     if r.status_code != 200:
-#         return jsonify({"error": "Cloud Function failed"}), 500
+    results = [
+        {
+            "provider": r.provider,
+            "accuracy": float(r.accuracy),
+            "ranking": r.ranking
+        }
+        for r in rows
+    ]
 
-#     result = r.json()
-#     return jsonify({"location_id": result["location_id"]})
-
-# if __name__ == '__main__':
-#     app.run(host="0.0.0.0", port=8080)
+    return {"results": results}
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 8080))
