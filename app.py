@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import requests
 
-CLOUD_FUNCTION_URL = "https://insert-weather-data-700897000697.us-central1.run.app"
+CLOUD_FUNCTION_URL = "https://calculate-accuracy-700897000697.us-central1.run.app"
 
 app = Flask(__name__)
 
