@@ -21,12 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         const data = await response.json();
+        console.log("Cloud Function response:", data);
 
-        if (data.location_id) {
-            window.location.href = `/results?location_id=${data.location_id}`;
+        if (data.results) {
+            // ⭐ Save results for results.html
+            sessionStorage.setItem("results", JSON.stringify(data.results));
+
+            // ⭐ Redirect WITHOUT location_id
+            window.location.href = "/results";
         } else {
             alert("Error submitting location");
         }
+
     });
 
 });
