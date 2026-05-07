@@ -24,10 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Cloud Function response:", data);
 
         if (data.results) {
-            // ⭐ Save results for results.html
             sessionStorage.setItem("results", JSON.stringify(data.results));
-
-            // ⭐ Redirect WITHOUT location_id
             window.location.href = "/results";
         } else {
             alert("Error submitting location");
